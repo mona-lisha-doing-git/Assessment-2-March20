@@ -30,12 +30,13 @@ wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@id='login-button']"))
 txt = wait.until(EC.visibility_of_element_located((By.XPATH, "//div[@class='header_secondary_container']//span[@class='title']")))
 print("Page Title Text:", txt.text)
 
-
+# Find ALL product names and print each name
 product_names=wait.until(EC.presence_of_all_elements_located((By.XPATH, "//div[@class='inventory_item_name ']")))
 print("\nALL product names:")
 for i in product_names:
     print(i.text)
 
+# Find ALL product prices and print each price
 product_prices=wait.until(EC.presence_of_all_elements_located((By.XPATH, "//div[@class='inventory_item_price']")))
 print("\nALL product prices:")
 for i in product_prices:
