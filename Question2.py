@@ -2,7 +2,6 @@ from selenium.webdriver import Chrome, ChromeOptions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from time import sleep
 
 o=ChromeOptions()
 o.add_experimental_option('detach', True)
