@@ -39,7 +39,7 @@ for i in product_names:
 product_prices=wait.until(EC.presence_of_all_elements_located((By.XPATH, "//div[@class='inventory_item_price']")))
 print("\nALL product prices:")
 for i in product_prices:
-    print("$",i.text)
+    print(i.text)
 
 # Click on the fourth product’s **Add to cart** button
 wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[@class='btn btn_primary btn_small btn_inventory '])[4]"))).click()
